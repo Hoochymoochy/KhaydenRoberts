@@ -2,7 +2,12 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
-export default function Lazer() {
+interface Props {
+  length: number;
+  x: number;
+}
+
+export default function Lazer({ length, x }: Props) {
   const laserRef = useRef(null);
 
   useEffect(() => {
@@ -20,13 +25,14 @@ export default function Lazer() {
   }, []);
 
   return (
-    <div className="relative w-full h-screen bg-black flex items-center justify-center overflow-hidden">
-      {/* Laser Beam */}
-      <div
-        ref={laserRef}
-        className="absolute w-1 h-full bg-red-500 opacity-75 left-1/2 transform -translate-x-1/2"
-        style={{ boxShadow: "0 0 20px 5px red" }}
-      />
-    </div>
+    <div
+      ref={laserRef}
+      className="w-1 h-full bg-red-500 opacity-75 transform -translate-x-1/2"
+      style={{
+        boxShadow: "0 0 20px 5px red",
+        height: `${length}px`,
+        left: `${x}px`,
+      }}
+    />
   );
 }

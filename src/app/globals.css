@@ -19,6 +19,20 @@
   }
 }
 
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.animate-gradient-move {
+  background-size: 200%;
+  animation: gradient-move 5s linear infinite;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

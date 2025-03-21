@@ -53,7 +53,6 @@ const words = [
   "Python",
   "Web Widgets",
   "AWS",
-
 ];
 
 const WordPlanet: React.FC = () => {
@@ -73,7 +72,7 @@ const WordPlanet: React.FC = () => {
     return sizes[Math.floor(Math.random() * sizes.length)];
   };
   const getRandomOpacity = () => {
-    const sizes = ["1", "0.8", "0.6",];
+    const sizes = ["1", "0.8", "0.6"];
     return sizes[Math.floor(Math.random() * sizes.length)];
   };
   const getRandomIndex = () => {
@@ -163,32 +162,30 @@ const WordPlanet: React.FC = () => {
   };
 
   return (
-    <div>
-      <div
-        ref={cardRef}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        className="relative w-80 h-80 rounded-full shadow-lg cursor-pointer"
-      >
-        {positions.map(([x, y], index) => (
-          <motion.div
-            key={index}
-            className={`absolute text-white font-bold ${
-              (getRandomSize(), getRandomIndex())
-            }`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: getRandomOpacity() }}
-            transition={{ delay: index * 0.05 }}
-            style={{
-              top: y,
-              left: x,
-              transform: "translate(-50%, -50%)",
-            }}
-          >
-            {words[index]}
-          </motion.div>
-        ))}
-      </div>
+    <div
+      ref={cardRef}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="relative w-80 h-80 rounded-full cursor-pointer"
+    >
+      {positions.map(([x, y], index) => (
+        <motion.div
+          key={index}
+          className={`absolute text-red-500 font-bold ${
+            (getRandomSize(), getRandomIndex())
+          }`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: getRandomOpacity() }}
+          transition={{ delay: index * 0.05 }}
+          style={{
+            top: y,
+            left: x,
+            transform: "translate(-50%, -50%)",
+          }}
+        >
+          {words[index]}
+        </motion.div>
+      ))}
     </div>
   );
 };
