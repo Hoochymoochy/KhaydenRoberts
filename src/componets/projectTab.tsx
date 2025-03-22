@@ -2,8 +2,6 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import gang from "../../public/gang.jpeg";
-import Image from "next/image";
 
 export default function ProjectTab() {
   const controls = useAnimation();
@@ -22,14 +20,14 @@ export default function ProjectTab() {
 
   return (
     <div
-      className="flex justify-center items-center flex-col space-y-96 py-28 px-10 w-full h-screen"
+      className="flex justify-center items-start flex-col py-28 px-20 w-full min-h-screen h-auto space-y-64"
       ref={ref}
     >
       {/* Section 1 */}
-      <div className="flex flex-row space-x-10 w-full h-3/5 relative justify-center items-center mt-auto">
+      <div className="flex flex-row space-x-10 w-full min-h-3/5 justify-center items-start">
         {/* Picture */}
         <motion.div
-          className="absolute left-0 w-1/2 flex flex-row"
+          className="w-1/2 justify-center items-center flex"
           animate={controls}
           initial="hidden"
           variants={{
@@ -38,7 +36,7 @@ export default function ProjectTab() {
           }}
           transition={{ duration: 0.5 }}
         >
-          <video autoPlay loop muted playsInline className="ml-52 h-fit ">
+          <video autoPlay loop muted playsInline className="object-cover">
             <source src="/core-mobile.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -53,47 +51,49 @@ export default function ProjectTab() {
             hidden: { x: 100, opacity: 0 },
           }}
           transition={{ duration: 0.5 }}
-          className="absolute right-0 w-1/2 text-4xl"
+          className="w-1/2 h-auto items-center flex "
         >
-          <div className="w-2/3 space-y-2">
-            <div>Core mobile frontend</div>
-            <div className="font-bold">
-              WORK ON DESIGN AND IMPLEMENTING SCREEN FEATURES AND ALLOWING USER
-              TO TRACK DATA
-            </div>
-            <div className="flex blocks space-x-6">
-              <div className="bg-purple-600 rounded-xl text-yellow-400 justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
-                UI/UX DESIGN
+          <div className="w-2/3 space-y-2 mt-32 relative overflow-hidden">
+            {/* Video Background */}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+            >
+              <source src="/border.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            {/* Content */}
+            <div className="relative z-10 p-4 bg-black m-3">
+              <div className="text-2xl text-white">Core Mobile Frontend</div>
+              <div className="font-bold text-4xl text-white">
+                Designing and Implementing Screen Features for User Data
+                Tracking
               </div>
-              <div className="bg-purple-600 rounded-xl text-yellow-400 justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
-                MOBILE DEVELOPMENT
+              <div className="flex blocks space-x-6 mt-4">
+                <div className="bg-purple-600 rounded-xl text-yellow-400 justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
+                  UI/UX Design
+                </div>
+                <div className="bg-purple-600 rounded-xl text-yellow-400 justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
+                  Mobile Development
+                </div>
+              </div>
+              <div className="text-2xl text-gray-300 mt-4">
+                Built the frontend architecture for a mobile app tracking user
+                data and visualizing growth, with seamless authentication and
+                dynamic UI for real-time location and activity tracking. Focused
+                on responsive interfaces for enhanced engagement.
               </div>
             </div>
-            <div>IT WAS PRETTY COOL NGL I FUCK WITH IT HEAVY TYPE SHI</div>
           </div>
         </motion.div>
       </div>
 
       {/* Section 2 */}
-      <div className="flex flex-row space-x-10 w-full h-3/5 relative justify-center items-center">
-        {/* Picture */}
-        <motion.div
-          className="absolute right-0 w-1/2 flex flex-row"
-          animate={controls}
-          initial="hidden"
-          variants={{
-            visible: { x: 0, opacity: 1 },
-            hidden: { x: -100, opacity: 0 },
-          }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="h-96 w-14 bg-green-900"></div>
-          <video autoPlay loop muted playsInline className=" object-cover">
-            <source src="/l0re.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </motion.div>
-
+      <div className="flex flex-row space-x-10 w-full min-h-3/5 justify-center items-start">
         {/* Text */}
         <motion.div
           animate={controls}
@@ -103,35 +103,34 @@ export default function ProjectTab() {
             hidden: { x: 100, opacity: 0 },
           }}
           transition={{ duration: 0.5 }}
-          className="absolute left-0 w-1/2 text-4xl ml-52"
+          className="w-1/2 text-4xl flex justify-center items-center h-auto"
         >
-          <div className="w-2/3 space-y-2">
-            <div>C0RE L0RE FULLSTACK</div>
-            <div className="font-bold">
-              WORK ON DESIGN AND IMPLEMENTING SCREEN FEATURES AND ALLOWING USER
-              TO TRACK DATA
+          <div className="w-2/3 space-y-2 mt-16">
+            <div className="text-lg font-semibold">C0RE L0RE Fullstack</div>
+            <div className="font-bold text-xl">
+              Designing and Implementing Screen Features for Comprehensive Data
+              Tracking
             </div>
             <div className="flex blocks space-x-6">
               <div className="bg-purple-600 rounded-xl text-yellow-400 justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
-                AI IMPLEMENTATION
+                AI Implementation
               </div>
               <div className="bg-purple-600 rounded-xl text-yellow-400 justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
-                DATA TRACKING
+                Data Tracking
               </div>
             </div>
-            <div>
-              CONNECT USER TO THERE OWN PERSNOL DATA TRACKER AND ALLOW USER TO
-              FILTER THE DATA WITH A LOCAL AI TO KEEP ALL OF THE DATA PRIVATE
+            <div className="text-sm text-gray-300 mt-4">
+              Developed an AI-powered personal data tracking system ensuring
+              privacy by processing data locally, with a backend synchronizing
+              user activity, skill evolution, and dynamic Lore experiences for
+              real-time progression insights.
             </div>
           </div>
         </motion.div>
-      </div>
 
-      {/* Section 3 */}
-      <div className="flex flex-row space-x-10 w-full h-3/5 relative justify-center items-center">
         {/* Picture */}
         <motion.div
-          className="absolute left-0 w-1/2 flex flex-row"
+          className="w-1/2"
           animate={controls}
           initial="hidden"
           variants={{
@@ -140,7 +139,27 @@ export default function ProjectTab() {
           }}
           transition={{ duration: 0.5 }}
         >
-          <video autoPlay loop muted playsInline className="ml-52 h-fit ">
+          <video autoPlay loop muted playsInline className="object-cover">
+            <source src="/l0re.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </motion.div>
+      </div>
+
+      {/* Section 3 */}
+      <div className="flex flex-row space-x-10 w-full min-h-3/5 relative justify-center items-start">
+        {/* Picture */}
+        <motion.div
+          className="w-1/2 flex flex-row"
+          animate={controls}
+          initial="hidden"
+          variants={{
+            visible: { x: 0, opacity: 1 },
+            hidden: { x: -100, opacity: 0 },
+          }}
+          transition={{ duration: 0.5 }}
+        >
+          <video autoPlay loop muted playsInline className="object-cover">
             <source src="/stuped.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -155,23 +174,27 @@ export default function ProjectTab() {
             hidden: { x: 100, opacity: 0 },
           }}
           transition={{ duration: 0.5 }}
-          className="absolute right-0 w-1/2 text-4xl"
+          className="w-1/2 text-4xl flex justify-center items-center h-auto"
         >
-          <div className="w-2/3 space-y-2">
-            <div>Core mobile frontend</div>
-            <div className="font-bold">
-              WORK ON DESIGN AND IMPLEMENTING SCREEN FEATURES AND ALLOWING USER
-              TO TRACK DATA
+          <div className="w-2/3 space-y-2 mt-10">
+            <div className="text-lg font-semibold">Stuped Web App</div>
+            <div className="font-bold text-xl">
+              Building a Vector Database-Powered Image Analysis System
             </div>
             <div className="flex blocks space-x-6">
               <div className="bg-purple-600 rounded-xl text-yellow-400 justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
-                VECTOR DATABASE
+                Vector Database
               </div>
               <div className="bg-purple-600 rounded-xl text-yellow-400 justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
-                REACT
+                React
               </div>
             </div>
-            <div>IT WAS PRETTY COOL NGL I FUCK WITH IT HEAVY TYPE SHI</div>
+            <div className="text-sm text-gray-300 mt-4">
+              Developed a web app that processes user-uploaded images via a
+              vector database, retrieving relevant Wikipedia articles in
+              real-time. Implemented efficient data processing and seamless
+              React integration for user interaction.
+            </div>
           </div>
         </motion.div>
       </div>
