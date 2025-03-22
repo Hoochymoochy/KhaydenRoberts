@@ -53,34 +53,35 @@ export default function ProjectTab() {
           transition={{ duration: 0.5 }}
           className="w-1/2 h-auto items-center flex "
         >
-          <div className="w-2/3 space-y-2 mt-32 relative overflow-hidden">
+          <div className="w-2/3 space-y-2 mt-20 relative overflow-hidden">
             {/* Video Background */}
             <video
               autoPlay
               loop
               muted
               playsInline
-              className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+              className="absolute inset-0 w-full h-full object-cover rounded-2xl grayscale brightness-200"
             >
               <source src="/border.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
             {/* Content */}
-            <div className="relative z-10 p-4 bg-black m-3">
+            <div className="relative z-10 p-4 bg-black/80 m-3 rounded-2xl">
               <div className="text-2xl text-white">Core Mobile Frontend</div>
               <div className="font-bold text-4xl text-white">
                 Designing and Implementing Screen Features for User Data
                 Tracking
               </div>
               <div className="flex blocks space-x-6 mt-4">
-                <div className="bg-purple-600 rounded-xl text-yellow-400 justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
+                <div className="bg-black border-2 text-white text-opacity-100 rounded-xl justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
                   UI/UX Design
                 </div>
-                <div className="bg-purple-600 rounded-xl text-yellow-400 justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
+                <div className="bg-black border-2 text-white text-opacity-50 rounded-xl justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
                   Mobile Development
                 </div>
               </div>
+
               <div className="text-2xl text-gray-300 mt-4">
                 Built the frontend architecture for a mobile app tracking user
                 data and visualizing growth, with seamless authentication and
@@ -105,25 +106,38 @@ export default function ProjectTab() {
           transition={{ duration: 0.5 }}
           className="w-1/2 text-4xl flex justify-center items-center h-auto"
         >
-          <div className="w-2/3 space-y-2 mt-16">
-            <div className="text-lg font-semibold">C0RE L0RE Fullstack</div>
-            <div className="font-bold text-xl">
-              Designing and Implementing Screen Features for Comprehensive Data
-              Tracking
-            </div>
-            <div className="flex blocks space-x-6">
-              <div className="bg-purple-600 rounded-xl text-yellow-400 justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
-                AI Implementation
-              </div>
-              <div className="bg-purple-600 rounded-xl text-yellow-400 justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
+          <div className="w-2/3 space-y-2 relative overflow-hidden">
+            {/* Video Background */}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover rounded-2xl grayscale brightness-200"
+            >
+              <source src="/border.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="relative z-10 p-4 bg-black/80 m-3 rounded-2xl">
+              <div className="text-2xl text-white">C0RE L0RE Fullstack</div>
+              <div className="font-bold text-4xl">
+                Designing and Implementing Screen Features for Comprehensive
                 Data Tracking
               </div>
-            </div>
-            <div className="text-sm text-gray-300 mt-4">
-              Developed an AI-powered personal data tracking system ensuring
-              privacy by processing data locally, with a backend synchronizing
-              user activity, skill evolution, and dynamic Lore experiences for
-              real-time progression insights.
+              <div className="flex blocks space-x-6 mt-4">
+                <div className="bg-black border-2 text-white text-opacity-100 rounded-xl justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
+                  AI Implementation
+                </div>
+                <div className="bg-black border-2 text-white text-opacity-100 rounded-xl justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
+                  Data Tracking
+                </div>
+              </div>
+              <div className="text-2xl text-gray-300 mt-4">
+                Developed an AI-powered personal data tracking system ensuring
+                privacy by processing data locally, with a backend synchronizing
+                user activity, skill evolution, and dynamic Lore experiences for
+                real-time progression insights.
+              </div>
             </div>
           </div>
         </motion.div>
@@ -176,24 +190,40 @@ export default function ProjectTab() {
           transition={{ duration: 0.5 }}
           className="w-1/2 text-4xl flex justify-center items-center h-auto"
         >
-          <div className="w-2/3 space-y-2 mt-10">
-            <div className="text-lg font-semibold">Stuped Web App</div>
-            <div className="font-bold text-xl">
-              Building a Vector Database-Powered Image Analysis System
-            </div>
-            <div className="flex blocks space-x-6">
-              <div className="bg-purple-600 rounded-xl text-yellow-400 justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
-                Vector Database
+          <div className="w-2/3 space-y- relative overflow-hidden">
+            {/* Video Background */}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover rounded-2xl grayscale brightness-200"
+            >
+              <source src="/border.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            {/* Content */}
+            <div className="relative z-10 p-4 bg-black/80 m-3 rounded-2xl">
+              <div className="text-2xl text-white">Stuped Web App</div>
+              <div className="font-bold text-4xl text-white">
+                Building a Vector Database-Powered Image Analysis System
               </div>
-              <div className="bg-purple-600 rounded-xl text-yellow-400 justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
-                React
+              <div className="flex blocks space-x-6 mt-4">
+                <div className="bg-black border-2 text-white text-opacity-100 rounded-xl justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
+                  React
+                </div>
+                <div className="bg-black border-2 text-white text-opacity-50 rounded-xl justify-center items-center text-xl p-2 inline-flex whitespace-nowrap px-4">
+                  Vector Database
+                </div>
               </div>
-            </div>
-            <div className="text-sm text-gray-300 mt-4">
-              Developed a web app that processes user-uploaded images via a
-              vector database, retrieving relevant Wikipedia articles in
-              real-time. Implemented efficient data processing and seamless
-              React integration for user interaction.
+
+              <div className="text-2xl text-gray-300 mt-4">
+                Developed a web app that processes user-uploaded images via a
+                vector database, retrieving relevant Wikipedia articles in
+                real-time. Implemented efficient data processing and seamless
+                React integration for user interaction.
+              </div>
             </div>
           </div>
         </motion.div>
