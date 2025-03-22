@@ -20,9 +20,20 @@ export default function ProjectTab() {
 
   return (
     <div
-      className="flex justify-center items-start flex-col py-28 px-20 w-full min-h-screen h-auto space-y-64"
+      className="flex justify-center bg-black items-start flex-col py-28 px-20 w-full min-h-screen h-auto space-y-64 relative"
       ref={ref}
     >
+      {/* <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="w-full h-full object-cover filter grayscale brightness-25 absolute"
+      >
+        <source src="/pxl.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video> */}
+
       {/* Section 1 */}
       <div className="flex flex-row space-x-10 w-full min-h-3/5 justify-center items-start">
         {/* Picture */}
