@@ -2,6 +2,7 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import Projects from "./projects.json";
 
 interface Tile {
   video: string;
@@ -12,36 +13,7 @@ interface Tile {
   text3: string;
 }
 
-const tiles: Record<string, Tile> = {
-  "1": {
-    video: "/core-mobile.mp4",
-    text1: "Core Mobile Frontend",
-    text2: "Designing and Implementing Screen Features for User Data Tracking",
-    badge1: "UI/UX Design",
-    badge2: "Mobile Development",
-    text3:
-      "Built the frontend architecture for a mobile app tracking user data and visualizing growth, with seamless authentication and dynamic UI for real-time location and activity tracking. Focused on responsive interfaces for enhanced engagement.",
-  },
-  "2": {
-    video: "/lore.mp4",
-    text1: "C0RE L0RE Fullstack",
-    text2:
-      "Designing and Implementing Screen Features for Comprehensive Data Tracking",
-    badge1: "AI Implementation",
-    badge2: "Data Tracking",
-    text3:
-      "Developed an AI-powered personal data tracking system ensuring privacy by processing data locally, with a backend synchronizing user activity, skill evolution, and dynamic Lore experiences for real-time progression insights.",
-  },
-  "3": {
-    video: "/stuped.mp4",
-    text1: "Stuped Web App",
-    text2: "Building a Vector Database-Powered Image Analysis System",
-    badge1: "Vector Database",
-    badge2: "Data Tracking",
-    text3:
-      "Developed a web app that processes user-uploaded images via a vector database, retrieving relevant Wikipedia articles in real-time. Implemented efficient data processing and seamless React integration for user interaction.",
-  },
-};
+const tiles: Record<string, Tile> = Projects;
 
 export default function ProjectTab() {
   const controls = useAnimation();
@@ -68,17 +40,25 @@ export default function ProjectTab() {
           <div
             key={key}
             ref={ref}
-            className="flex flex-row space-x-10 w-full min-h-3/5 justify-center items-start"
+            className="flex flex-row justify-center items-center w-full space-x-10 min-h-3/5"
           >
             {isEven ? (
               <>
-                {renderVideo(tile.video)}
-                {renderText(tile)}
+                <div className="flex justify-center items-center w-1/2">
+                  {renderText(tile)}
+                </div>
+                <div className="flex justify-center items-center w-1/2">
+                  {renderVideo(tile.video)}
+                </div>
               </>
             ) : (
               <>
-                {renderText(tile)}
-                {renderVideo(tile.video)}
+                <div className="flex justify-center items-center w-1/2">
+                  {renderVideo(tile.video)}
+                </div>
+                <div className="flex justify-center items-center w-1/2">
+                  {renderText(tile)}
+                </div>
               </>
             )}
           </div>
@@ -89,7 +69,7 @@ export default function ProjectTab() {
 
   function renderVideo(videoSrc: string) {
     return (
-      <div className="w-1/2 justify-center items-center flex">
+      <div className="w-full flex justify-center items-center">
         <video autoPlay loop muted playsInline className="object-cover">
           <source src={videoSrc} type="video/mp4" />
           Your browser does not support the video tag.
@@ -100,7 +80,7 @@ export default function ProjectTab() {
 
   function renderText(tile: Tile) {
     return (
-      <div className="w-1/2 h-auto items-center flex">
+      <div className="w-full flex justify-center items-center">
         <div className="w-2/3 space-y-2 mt-20 relative overflow-hidden">
           <video
             autoPlay

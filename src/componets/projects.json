@@ -1,0 +1,26 @@
+{
+  "1": {
+    "video": "/core-mobile.mp4",
+    "text1": "Core Mobile Frontend",
+    "text2": "Designing and Implementing Screen Features for User Data Tracking",
+    "badge1": "UI/UX Design",
+    "badge2": "Mobile Development",
+    "text3": "Built the frontend architecture for a mobile app tracking user data and visualizing growth, with seamless authentication and dynamic UI for real-time location and activity tracking. Focused on responsive interfaces for enhanced engagement."
+  },
+  "2": {
+    "video": "/lore.mp4",
+    "text1": "C0RE L0RE Fullstack",
+    "text2": "Designing and Implementing Screen Features for Comprehensive Data Tracking",
+    "badge1": "AI Implementation",
+    "badge2": "Data Tracking",
+    "text3": "Developed an AI-powered personal data tracking system ensuring privacy by processing data locally, with a backend synchronizing user activity, skill evolution, and dynamic Lore experiences for real-time progression insights."
+  },
+  "3": {
+    "video": "/stuped.mp4",
+    "text1": "Stuped Web App",
+    "text2": "Building a Vector Database-Powered Image Analysis System",
+    "badge1": "Vector Database",
+    "badge2": "Data Tracking",
+    "text3": "Developed a web app that processes user-uploaded images via a vector database, retrieving relevant Wikipedia articles in real-time. Implemented efficient data processing and seamless React integration for user interaction."
+  }
+}
