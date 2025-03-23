@@ -1,5 +1,5 @@
 import Head from "next/head";
-import ProjectTab from "@/componets/projectTab";
+import ProjectTab from "@/componets/ProjectTab";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
         />
       </Head>
 
-      <div className="bg-white flex min-h-screen flex-col relative overflow-y-scroll">
+      <div className="bg-white flex min-h-screen flex-col relative">
         {/* Header */}
         <div className="relative w-full flex flex-col items-center h-screen">
           <video
@@ -49,7 +49,7 @@ export default function Home() {
         <ProjectTab />
 
         {/* Footer */}
-        <div className="bg-gray-600 flex w-full px-32 flex-col space-y-5 py-10">
+        <div className="bg-black flex w-full px-32 flex-col space-y-5 py-10 border-t-2 ">
           <div>Thanks for looking around</div>
           <div className="flex flex-row space-x-14">
             <div className="flex flex-col">
