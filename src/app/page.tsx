@@ -1,7 +1,14 @@
+"use client";
 import Head from "next/head";
 import ProjectTab from "@/componets/ProjectTab";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
+  const navigateToAbout = () => {
+    router.push("/about");
+  };
   return (
     <>
       <Head>
@@ -31,7 +38,9 @@ export default function Home() {
           <div className="flex flex-row justify-between items-center px-36 py-5 w-full z-10 absolute top-0">
             <h1 className="text-2xl font-bold">KHAYDEN ROBERTS</h1>
             <div className="flex flex-row space-x-5 text-lg font-medium">
-              <div>work</div>
+              <button onClick={navigateToAbout} className="z-10">
+                work
+              </button>
               <div>play</div>
               <div>About</div>
             </div>
