@@ -66,11 +66,16 @@ export default function ProjectTab() {
       })}
     </div>
   );
-
   function renderVideo(videoSrc: string) {
     return (
       <div className="w-full flex justify-center items-center">
-        <video autoPlay loop muted playsInline className="object-cover">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-[80%] h-auto object-cover rounded-xl"
+        >
           <source src={videoSrc} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
