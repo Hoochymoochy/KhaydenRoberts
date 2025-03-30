@@ -6,16 +6,22 @@ import { useRouter } from "next/navigation";
 export default function Home() {
   const router = useRouter();
 
-  const navigateToAbout = () => {
-    router.push("/about");
-  };
+  const navigateToAbout = () => router.push("/about");
+  const navigateToExperience = () => router.push("/experience");
+  const navigateToProjects = () => router.push("/projects");
+
   return (
-    <>
+    <> {
+      /* 
+      to do
+      edit the mobile to make it bigger. Then 
+       */
+      }
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap"
           rel="stylesheet"
         />
       </Head>
@@ -35,19 +41,25 @@ export default function Home() {
           </video>
 
           {/* Navigation Bar */}
-          <div className="flex flex-row justify-between items-center px-36 py-5 w-full z-10 absolute top-0">
-            <h1 className="text-2xl font-bold">KHAYDEN ROBERTS</h1>
-            <div className="flex flex-row space-x-5 text-lg font-medium">
-              <button onClick={navigateToAbout} className="z-10">
-                work
+          <div className="flex justify-end items-center px-36 py-5 w-full z-10 absolute top-0">
+            <div className="flex space-x-8 text-lg font-medium text-white">
+              <button onClick={navigateToAbout} className="hover:underline">
+                About
               </button>
-              <div>play</div>
-              <div>About</div>
+              <button
+                onClick={navigateToExperience}
+                className="hover:underline"
+              >
+                Experience
+              </button>
+              <button onClick={navigateToProjects} className="hover:underline">
+                Projects
+              </button>
             </div>
           </div>
 
-          {/* Content */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center space-y-3 text-center z-10">
+          {/* Title Section */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-0 space-y-3">
             <div className="text-xl font-semibold text-white">
               UI/UX DESIGNER AND BACKEND DEVELOPER
             </div>
@@ -58,25 +70,24 @@ export default function Home() {
         <ProjectTab />
 
         {/* Footer */}
-        <div className="bg-black flex w-full px-32 flex-col space-y-5 py-10 border-t-2 ">
-          <div>Thanks for looking around</div>
-          <div className="flex flex-row space-x-14">
-            <div className="flex flex-col">
-              <h1>CONTACT ME</h1>
-              <h1>Khaydenroberts22@gmail.com</h1>
+        <footer className="bg-black text-white flex flex-col w-full px-16 py-10 border-t-2 border-white">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+              <h1 className="font-semibold text-white">CONTACT ME</h1>
+              <p className="text-gray-300">Khaydenroberts22@gmail.com</p>
             </div>
-
-            <div className="flex flex-col">
-              <h1>LET'S CONNECT</h1>
-              <h1>Linkedin Resume Work</h1>
+            <div>
+              <h1 className="font-semibold text-white">LET'S CONNECT</h1>
+              <p className="text-gray-300">LinkedIn | Resume | Work</p>
             </div>
-
-            <div className="flex flex-col">
-              <h1>@2025 KHAYDEN ROBERTS</h1>
-              <h1>Made with Next.js and Tailwind</h1>
+            <div>
+              <h1 className="font-semibold text-white">
+                © 2025 KHAYDEN ROBERTS
+              </h1>
+              <p className="text-gray-300">Made with Next.js and Tailwind</p>
             </div>
           </div>
-        </div>
+        </footer>
       </div>
     </>
   );
