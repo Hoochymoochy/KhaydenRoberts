@@ -54,12 +54,12 @@ const WordPlanet: React.FC = () => {
       const centerY = height / 2;
       const radius = Math.min(width, height) * 0.45;
 
-      const newPositions = words.map(() => {
+      const newPositions: [number, number][] = words.map(() => {
         const angle = Math.random() * 2 * Math.PI;
         const distance = Math.random() * radius;
         const x = centerX + distance * Math.cos(angle);
         const y = centerY + distance * Math.sin(angle);
-        return [x, y];
+        return [x, y] as [number, number]; // Ensures TypeScript treats it as a tuple
       });
 
       setPositions(newPositions);

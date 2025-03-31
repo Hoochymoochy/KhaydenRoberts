@@ -12,22 +12,14 @@ export default function Home() {
 
   // Add scroll to projects function
   const scrollToProjects = () => {
-    document.getElementById("projects-section").scrollIntoView({
-      behavior: "smooth",
-    });
+    const section = document.getElementById("projects-section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
     <>
-      {" "}
-      <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
       <div className="bg-white flex min-h-screen flex-col relative">
         {/* Header */}
         <div className="relative w-full flex flex-col items-center h-screen">
