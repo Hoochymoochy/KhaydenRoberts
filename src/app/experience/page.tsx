@@ -1,5 +1,5 @@
 "use client";
-import WordPlanet from "@/componets/WordPlanet";
+import WordPlanet from "@/components/WordPlanet";
 import { useRouter } from "next/navigation";
 
 export default function Experience() {

@@ -1,5 +1,5 @@
 "use client";
-import ProjectTab from "@/componets/ProjectTab";
+import ProjectTab from "@/components/ProjectTab";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
