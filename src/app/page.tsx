@@ -2,21 +2,24 @@
 import Head from "next/head";
 import ProjectTab from "@/componets/ProjectTab";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Home() {
   const router = useRouter();
 
   const navigateToAbout = () => router.push("/about");
   const navigateToExperience = () => router.push("/experience");
-  const navigateToProjects = () => router.push("/projects");
+
+  // Add scroll to projects function
+  const scrollToProjects = () => {
+    document.getElementById("projects-section").scrollIntoView({
+      behavior: "smooth",
+    });
+  };
 
   return (
-    <> {
-      /* 
-      to do
-      edit the mobile to make it bigger. Then 
-       */
-      }
+    <>
+      {" "}
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -25,7 +28,6 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-
       <div className="bg-white flex min-h-screen flex-col relative">
         {/* Header */}
         <div className="relative w-full flex flex-col items-center h-screen">
@@ -52,9 +54,6 @@ export default function Home() {
               >
                 Experience
               </button>
-              <button onClick={navigateToProjects} className="hover:underline">
-                Projects
-              </button>
             </div>
           </div>
 
@@ -65,9 +64,24 @@ export default function Home() {
             </div>
             <div className="text-4xl font-bold text-white">Khayden Roberts</div>
           </div>
+
+          {/* Arrow - Added onClick function */}
+          <div className="absolute bottom-10 flex justify-center w-full">
+            <button onClick={scrollToProjects} className="cursor-pointer">
+              <Image
+                src="/down-arrow.png"
+                alt="Scroll Down"
+                width={50}
+                height={50}
+              />
+            </button>
+          </div>
         </div>
 
-        <ProjectTab />
+        {/* Added ID to the ProjectTab section */}
+        <div id="projects-section">
+          <ProjectTab />
+        </div>
 
         {/* Footer */}
         <footer className="bg-black text-white flex flex-col w-full px-16 py-10 border-t-2 border-white">
@@ -78,8 +92,25 @@ export default function Home() {
             </div>
             <div>
               <h1 className="font-semibold text-white">LET'S CONNECT</h1>
-              <p className="text-gray-300">LinkedIn | Resume | Work</p>
+              <p className="text-gray-300">
+                <a
+                  href="https://www.linkedin.com/in/khayden-roberts-5783b32b5/"
+                  target="_blank"
+                  className="text-blue-400"
+                >
+                  LinkedIn
+                </a>
+                <span> |</span>
+                <a
+                  href="https://github.com/Hoochymoochy?tab=overview&from=2025-03-01&to=2025-03-30"
+                  target="_blank"
+                  className="text-blue-400"
+                >
+                  Github
+                </a>
+              </p>
             </div>
+
             <div>
               <h1 className="font-semibold text-white">
                 © 2025 KHAYDEN ROBERTS

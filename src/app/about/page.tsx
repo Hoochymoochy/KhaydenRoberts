@@ -7,8 +7,8 @@ export default function About() {
   const navigateToHome = () => {
     router.push("/");
   };
-  const navigateToWork = () => {
-    router.push("/work");
+  const navigateToExperience = () => {
+    router.push("/experience");
   };
 
   return (
@@ -19,8 +19,8 @@ export default function About() {
           Home
         </button>
         <span className="mr-6 text-gray-400">About</span>
-        <button onClick={navigateToWork} className="hover:underline">
-          Work
+        <button onClick={navigateToExperience} className="hover:underline">
+          Experience
         </button>
       </div>
 
