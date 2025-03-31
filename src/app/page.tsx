@@ -2,6 +2,7 @@
 import ProjectTab from "@/components/ProjectTab";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Home() {
   const router = useRouter();
@@ -19,6 +20,7 @@ export default function Home() {
 
   return (
     <>
+      <Analytics />
       <div className="bg-white flex min-h-screen flex-col relative">
         {/* Header */}
         <div className="relative w-full flex flex-col items-center h-screen">
