@@ -1,5 +1,4 @@
 "use client";
-import Head from "next/head";
 import ProjectTab from "@/componets/ProjectTab";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -83,7 +82,7 @@ export default function Home() {
               <p className="text-gray-300">Khaydenroberts22@gmail.com</p>
             </div>
             <div>
-              <h1 className="font-semibold text-white">LET'S CONNECT</h1>
+              <h1 className="font-semibold text-white">{"LET'S CONNECT"}</h1>
               <p className="text-gray-300">
                 <a
                   href="https://www.linkedin.com/in/khayden-roberts-5783b32b5/"
