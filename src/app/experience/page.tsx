@@ -37,13 +37,13 @@ export default function Experience() {
       <div className="flex justify-center md:justify-end px-4 md:px-12 py-4 md:py-6 text-base md:text-lg font-medium w-full bg-black z-10">
         <button
           onClick={navigateToHome}
-          className="mx-2 md:mr-6 hover:text-gray-400 transition duration-300"
+          className="mx-2 md:mr-6 hover:text-gray-400 transition duration-300 hover:underline"
         >
           Home
         </button>
         <button
           onClick={navigateToAbout}
-          className="mx-2 md:mr-6 hover:text-gray-400 transition duration-300"
+          className="mx-2 md:mr-6 hover:text-gray-400 transition duration-300 hover:underline"
         >
           About
         </button>
