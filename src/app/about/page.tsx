@@ -1,33 +1,55 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function About() {
   const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check for mobile viewport on component mount and window resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Initial check
+    checkMobile();
+
+    // Add resize listener
+    window.addEventListener("resize", checkMobile);
+
+    // Cleanup listener
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const navigateToHome = () => {
     router.push("/");
   };
+
   const navigateToExperience = () => {
     router.push("/experience");
   };
 
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
-      {/* Navigation Bar */}
-      <div className="flex justify-end px-12 py-6 text-lg font-medium absolute top-0 w-full">
-        <button onClick={navigateToHome} className="mr-6 hover:underline">
+      {/* Navigation Bar - Fixed position instead of absolute */}
+      <div className="flex justify-center md:justify-end px-4 md:px-12 py-4 md:py-6 text-base md:text-lg font-medium w-full bg-black">
+        <button
+          onClick={navigateToHome}
+          className="mx-2 md:mr-6 hover:underline"
+        >
           Home
         </button>
-        <span className="mr-6 text-gray-400">About</span>
-        <button onClick={navigateToExperience} className="hover:underline">
+        <span className="mx-2 md:mr-6 text-gray-400">About</span>
+        <button onClick={navigateToExperience} className="mx-2 hover:underline">
           Experience
         </button>
       </div>
 
       {/* Content */}
-      <div className="flex flex-row items-center w-full h-full">
-        {/* Video Section */}
-        <div className="w-1/2 relative h-screen overflow-hidden">
+      <div className="flex flex-col md:flex-row items-center w-full flex-1">
+        {/* Video Section - Full width on mobile, half width on desktop */}
+        <div className="w-full md:w-1/2 relative h-64 md:h-screen md:h-full overflow-hidden">
           <video
             autoPlay
             loop
@@ -41,42 +63,42 @@ export default function About() {
         </div>
 
         {/* Text Section */}
-        <div className="w-1/2 flex flex-col items-start justify-center px-12">
-          <h1 className="text-4xl font-bold mb-4">
+        <div className="w-full md:w-1/2 flex flex-col items-start justify-center px-6 md:px-12 py-8 md:py-0">
+          <h1 className="text-2xl md:text-4xl font-bold mb-4">
             {"Hello, my name is Khayden Roberts. I'm a Full-Stack Developer."}
           </h1>
-          <p className="text-lg mb-6">
+          <p className="text-base md:text-lg mb-4 md:mb-6">
             I specialize in crafting scalable, efficient, and engaging web and
             mobile applications. With a deep passion for technology, I thrive in
             building seamless user experiences, leveraging tools like React,
             Node.js, Express, and AWS to create high-performance applications.
           </p>
-          <p className="text-lg mb-6">
+          <p className="text-base md:text-lg mb-4 md:mb-6">
             {
               "Beyond coding, I'm also exploring the intersection of music, AR, and AI, bringing creative and technical innovation together. Whether it's developing a cloud server platform, enhancing Spotify-integrated AR experiences, or DJing high-energy techno sets, I bring a unique blend of technical expertise and creativity to every project."
             }
           </p>
-          <p className="text-lg mb-6">
+          <p className="text-base md:text-lg mb-4 md:mb-6">
             {
               "Looking for a developer who thrives on solving complex problems and pushing boundaries? Let's connect and build something incredible together."
             }
           </p>
 
           {/* Contact Section */}
-          <div className="relative mt-10">
+          <div className="relative mt-6 md:mt-10 w-full md:w-auto">
             <video
               autoPlay
               loop
               muted
               playsInline
-              className="absolute inset-0 w-full h-full object-cover rounded-2xl grayscale brightness-200"
+              className="absolute inset-0 w-full h-full object-cover rounded-xl md:rounded-2xl grayscale brightness-200"
             >
               <source src="/border.mp4" type="video/mp4" />
             </video>
-            <div className="relative z-10 px-6 py-3 bg-black/80 m-3 rounded-2xl hover:bg-black ease-in-out duration-500">
+            <div className="relative z-10 px-4 md:px-6 py-3 bg-black/80 m-2 md:m-3 rounded-xl md:rounded-2xl hover:bg-black ease-in-out duration-500 text-center md:text-left">
               <a
                 href="mailto:Khaydenroberts22@gmail.com"
-                className="text-xl text-white"
+                className="text-lg md:text-xl text-white"
               >
                 Get in Touch
               </a>

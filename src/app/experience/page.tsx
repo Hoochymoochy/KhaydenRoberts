@@ -1,54 +1,73 @@
 "use client";
 import WordPlanet from "@/components/WordPlanet";
 import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function Experience() {
   const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check for mobile viewport on component mount and window resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Initial check
+    checkMobile();
+
+    // Add resize listener
+    window.addEventListener("resize", checkMobile);
+
+    // Cleanup listener
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const navigateToHome = () => {
     router.push("/");
   };
+
   const navigateToAbout = () => {
     router.push("/about");
   };
 
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
-      {/* Navigation Bar */}
-      <div className="flex justify-end px-12 py-6 text-lg font-medium absolute top-0 w-full z-10">
+      {/* Navigation Bar - Fixed position instead of absolute */}
+      <div className="flex justify-center md:justify-end px-4 md:px-12 py-4 md:py-6 text-base md:text-lg font-medium w-full bg-black z-10">
         <button
           onClick={navigateToHome}
-          className="mr-6 hover:text-gray-400 transition duration-300"
+          className="mx-2 md:mr-6 hover:text-gray-400 transition duration-300"
         >
           Home
         </button>
         <button
           onClick={navigateToAbout}
-          className="mr-6 hover:text-gray-400 transition duration-300"
+          className="mx-2 md:mr-6 hover:text-gray-400 transition duration-300"
         >
           About
         </button>
-        <span className="mr-6 text-gray-500">Experience</span>
+        <span className="mx-2 text-gray-500">Experience</span>
       </div>
 
       {/* Content */}
-      <div className="flex flex-row items-center w-full h-full pt-24 pb-16">
-        {/* WordPlanet Section */}
-        <div className="w-1/2 relative h-screen flex items-center justify-center">
+      <div className="flex flex-col md:flex-row items-center w-full flex-1">
+        {/* WordPlanet Section - Show below content on mobile, left side on desktop */}
+        <div className="w-full md:w-1/2 relative h-64 md:h-full flex items-center justify-center order-last md:order-first">
           <WordPlanet />
         </div>
 
-        {/* Text Section */}
-        <div className="w-1/2 flex flex-col items-start justify-center px-12 py-16 max-h-screen ">
-          <h1 className="text-4xl font-extrabold mb-8 text-left text-white">
+        {/* Text Section - Scrollable on smaller screens */}
+        <div className="w-full md:w-1/2 flex flex-col items-start justify-start px-6 md:px-12 py-4 md:py-8 overflow-y-auto max-h-screen">
+          <h1 className="text-3xl md:text-4xl font-extrabold mb-6 md:mb-8 text-left text-white">
             My Experience
           </h1>
 
-          <section className="mb-10 border-l-2 border-gray-700 pl-6">
-            <h2 className="text-2xl font-semibold text-gray-200">
+          <section className="mb-6 md:mb-10 border-l-2 border-gray-700 pl-4 md:pl-6">
+            <h2 className="text-xl md:text-2xl font-semibold text-gray-200">
               Project-Based Learning
             </h2>
-            <p className="mt-3 text-gray-300">
+            <p className="mt-2 md:mt-3 text-sm md:text-base text-gray-300">
               I attended a project-based learning institution, where hands-on
               experience was the core of my education. Instead of just learning
               theories, I applied concepts to real-world projects, collaborating
@@ -61,11 +80,11 @@ export default function Experience() {
             </p>
           </section>
 
-          <section className="mb-10 border-l-2 border-gray-700 pl-6">
-            <h2 className="text-2xl font-semibold text-gray-200">
+          <section className="mb-6 md:mb-10 border-l-2 border-gray-700 pl-4 md:pl-6">
+            <h2 className="text-xl md:text-2xl font-semibold text-gray-200">
               Scrum & Leadership
             </h2>
-            <p className="mt-3 text-gray-300">
+            <p className="mt-2 md:mt-3 text-sm md:text-base text-gray-300">
               As a Scrum Master in multiple projects, I led teams through Agile
               sprints, ensuring smooth workflows, effective communication, and
               continuous improvement. I facilitated daily stand-ups, sprint
@@ -78,11 +97,11 @@ export default function Experience() {
             </p>
           </section>
 
-          <section className="mb-10 border-l-2 border-gray-700 pl-6">
-            <h2 className="text-2xl font-semibold text-gray-200">
+          <section className="mb-6 md:mb-10 border-l-2 border-gray-700 pl-4 md:pl-6">
+            <h2 className="text-xl md:text-2xl font-semibold text-gray-200">
               Team Collaboration
             </h2>
-            <p className="mt-3 text-gray-300">
+            <p className="mt-2 md:mt-3 text-sm md:text-base text-gray-300">
               I have worked with teams of all sizes, from small agile groups to
               large-scale development teams. Collaborating with people of
               varying experience levels has taught me the importance of
@@ -95,11 +114,11 @@ export default function Experience() {
             </p>
           </section>
 
-          <section className="mb-10 border-l-2 border-gray-700 pl-6">
-            <h2 className="text-2xl font-semibold text-gray-200">
+          <section className="mb-6 md:mb-10 border-l-2 border-gray-700 pl-4 md:pl-6">
+            <h2 className="text-xl md:text-2xl font-semibold text-gray-200">
               Technical Skills & Tools
             </h2>
-            <p className="mt-3 text-gray-300">
+            <p className="mt-2 md:mt-3 text-sm md:text-base text-gray-300">
               My experience has allowed me to work with a variety of
               technologies and tools, including React, Node.js, Express,
               WebSockets, and AWS. I am proficient in full-stack development and
@@ -109,11 +128,11 @@ export default function Experience() {
             </p>
           </section>
 
-          <section className="border-l-2 border-gray-700 pl-6">
-            <h2 className="text-2xl font-semibold text-gray-200">
+          <section className="mb-6 md:mb-10 border-l-2 border-gray-700 pl-4 md:pl-6">
+            <h2 className="text-xl md:text-2xl font-semibold text-gray-200">
               Problem-Solving & Adaptability
             </h2>
-            <p className="mt-3 text-gray-300">
+            <p className="mt-2 md:mt-3 text-sm md:text-base text-gray-300 mb-8 md:mb-0">
               Throughout my experiences, I have encountered and overcome
               numerous challenges, from debugging complex systems to optimizing
               team workflows. My ability to quickly assess a situation, break

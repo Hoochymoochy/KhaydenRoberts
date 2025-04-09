@@ -3,9 +3,27 @@ import ProjectTab from "@/components/ProjectTab";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Analytics } from "@vercel/analytics/react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check for mobile viewport on component mount and window resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Initial check
+    checkMobile();
+
+    // Add resize listener
+    window.addEventListener("resize", checkMobile);
+
+    // Cleanup listener
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const navigateToAbout = () => router.push("/about");
   const navigateToExperience = () => router.push("/experience");
@@ -35,9 +53,9 @@ export default function Home() {
             Your browser does not support the video tag.
           </video>
 
-          {/* Navigation Bar */}
-          <div className="flex justify-end items-center px-36 py-5 w-full z-10 absolute top-0">
-            <div className="flex space-x-8 text-lg font-medium text-white">
+          {/* Navigation Bar - Responsive */}
+          <div className="flex justify-center md:justify-end items-center px-4 md:px-12 lg:px-36 py-5 w-full z-10 absolute top-0">
+            <div className="flex space-x-4 md:space-x-8 text-base md:text-lg font-medium text-white">
               <button onClick={navigateToAbout} className="hover:underline">
                 About
               </button>
@@ -51,21 +69,23 @@ export default function Home() {
           </div>
 
           {/* Title Section */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-0 space-y-3">
-            <div className="text-xl font-semibold text-white">
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-0 space-y-2 md:space-y-3 px-4">
+            <div className="text-base md:text-xl font-semibold text-white">
               UI/UX DESIGNER AND BACKEND DEVELOPER
             </div>
-            <div className="text-4xl font-bold text-white">Khayden Roberts</div>
+            <div className="text-2xl md:text-4xl font-bold text-white">
+              Khayden Roberts
+            </div>
           </div>
 
           {/* Arrow - Added onClick function */}
-          <div className="absolute bottom-10 flex justify-center w-full">
+          <div className="absolute bottom-6 md:bottom-10 flex justify-center w-full">
             <button onClick={scrollToProjects} className="cursor-pointer">
               <Image
                 src="/down-arrow.png"
                 alt="Scroll Down"
-                width={50}
-                height={50}
+                width={isMobile ? 40 : 50}
+                height={isMobile ? 40 : 50}
               />
             </button>
           </div>
@@ -76,14 +96,14 @@ export default function Home() {
           <ProjectTab />
         </div>
 
-        {/* Footer */}
-        <footer className="bg-black text-white flex flex-col w-full px-16 py-10 border-t-2 border-white">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-            <div>
+        {/* Footer - Responsive */}
+        <footer className="bg-black text-white flex flex-col w-full px-6 md:px-16 py-8 md:py-10 border-t-2 border-white">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-center md:text-left">
+            <div className="mb-4 md:mb-0">
               <h1 className="font-semibold text-white">CONTACT ME</h1>
               <p className="text-gray-300">Khaydenroberts22@gmail.com</p>
             </div>
-            <div>
+            <div className="mb-4 md:mb-0">
               <h1 className="font-semibold text-white">{"LET'S CONNECT"}</h1>
               <p className="text-gray-300">
                 <a
