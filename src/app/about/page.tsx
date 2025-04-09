@@ -1,26 +1,8 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
 
 export default function About() {
   const router = useRouter();
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Check for mobile viewport on component mount and window resize
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    // Initial check
-    checkMobile();
-
-    // Add resize listener
-    window.addEventListener("resize", checkMobile);
-
-    // Cleanup listener
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
 
   const navigateToHome = () => {
     router.push("/");
@@ -32,7 +14,7 @@ export default function About() {
 
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
-      {/* Navigation Bar - Fixed position instead of absolute */}
+      {/* Navigation Bar */}
       <div className="flex justify-center md:justify-end px-4 md:px-12 py-4 md:py-6 text-base md:text-lg font-medium w-full bg-black">
         <button
           onClick={navigateToHome}
@@ -48,7 +30,7 @@ export default function About() {
 
       {/* Content */}
       <div className="flex flex-col md:flex-row items-center w-full flex-1">
-        {/* Video Section - Full width on mobile, half width on desktop */}
+        {/* Video Section */}
         <div className="w-full md:w-1/2 relative h-64 md:h-screen md:h-full overflow-hidden">
           <video
             autoPlay
@@ -75,7 +57,7 @@ export default function About() {
           </p>
           <p className="text-base md:text-lg mb-4 md:mb-6">
             {
-              "Beyond coding, I'm also exploring the intersection of music, AR, and AI, bringing creative and technical innovation together. Whether it's developing a cloud server platform, enhancing Spotify-integrated AR experiences, or DJing high-energy techno sets, I bring a unique blend of technical expertise and creativity to every project."
+              "Beyond coding, I'm also exploring the intersection of music, AR, and AI, bringing creative and technical innovation together."
             }
           </p>
           <p className="text-base md:text-lg mb-4 md:mb-6">
