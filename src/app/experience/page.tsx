@@ -40,7 +40,7 @@ export default function Experience() {
         </div>
 
         {/* Text Section - Scrollable on smaller screens */}
-        <div className="w-full md:w-1/2 flex flex-col items-start justify-start px-6 md:px-12 py-4 md:py-8 overflow-y-auto max-h-screen">
+        <div className="w-full md:w-1/2 flex flex-col items-start justify-start px-6 md:px-12 py-4 md:py-8 ">
           <h1 className="text-3xl md:text-4xl font-extrabold mb-6 md:mb-8 text-left text-white">
             My Experience
           </h1>
