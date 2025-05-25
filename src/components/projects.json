@@ -7,14 +7,6 @@
     "badge2": "Mobile Development",
     "text3": "Built the frontend architecture for a mobile app tracking user data and visualizing growth, with seamless authentication and dynamic UI for real-time location and activity tracking. Focused on responsive interfaces for enhanced engagement."
   },
-  "2": {
-    "video": "/stuped.mp4",
-    "text1": "Braindance Fullstack",
-    "text2": "A digital platform for DJs, dancers, and nightclubs to create interactive music experiences",
-    "badge1": "Distributed System",
-    "badge2": "Real-Time Interaction",
-    "text3": "Developed an immersive event platform that connects DJs and audiences through music, dance, and visuals, featuring real-time visual control, live streaming, and community engagement tools."
-  },
   "3": {
     "video": "/lore.mp4",
     "text1": "C0RE L0RE Fullstack",
