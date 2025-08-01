@@ -85,15 +85,7 @@ export default function Experience() {
                 Project-Based Learning
               </h2>
               <p className="mt-2 md:mt-3 text-sm md:text-base text-gray-300">
-                I attended a project-based learning institution, where hands-on
-                experience was the core of my education. Instead of just learning
-                theories, I applied concepts to real-world projects, collaborating
-                with teams of different skill levels. This approach taught me how
-                to quickly adapt to new challenges, work efficiently in a team,
-                and develop practical problem-solving skills. I worked on diverse
-                projects spanning web development, mobile applications, and
-                backend systems, which helped me build a strong foundation in
-                software engineering.
+              Hands-on projects shaped me — building real apps, collaborating cross-skill, and leveling up fast. I’m all about practical problem-solving and delivering full-stack solutions.
               </p>
             </section>
 
@@ -102,15 +94,7 @@ export default function Experience() {
                 Scrum & Leadership
               </h2>
               <p className="mt-2 md:mt-3 text-sm md:text-base text-gray-300">
-                As a Scrum Master in multiple projects, I led teams through Agile
-                sprints, ensuring smooth workflows, effective communication, and
-                continuous improvement. I facilitated daily stand-ups, sprint
-                planning, and retrospectives, helping the team stay aligned with
-                project goals while adapting to changes efficiently. My experience
-                in Scrum has strengthened my leadership, time management, and
-                organizational skills. Additionally, I mentored junior developers,
-                helping them navigate project complexities and improve their
-                technical and collaborative abilities.
+              Led Agile sprints as Scrum Master, driving teams with clear goals, smooth workflows, and sharp communication. Mentored juniors to boost their skills and project impact.
               </p>
             </section>
 
@@ -119,15 +103,7 @@ export default function Experience() {
                 Team Collaboration
               </h2>
               <p className="mt-2 md:mt-3 text-sm md:text-base text-gray-300">
-                I have worked with teams of all sizes, from small agile groups to
-                large-scale development teams. Collaborating with people of
-                varying experience levels has taught me the importance of
-                mentorship, adaptability, and clear communication. I have also
-                worked on cross-functional teams, where I coordinated with
-                designers, backend engineers, and product managers to ensure
-                seamless project execution. My ability to bridge gaps between
-                different teams and maintain a shared vision has been crucial in
-                delivering successful projects.
+              From scrappy small teams to big cross-functional crews, I bridge gaps between devs, designers, and PMs. Clear communication + shared vision = project wins.
               </p>
             </section>
 
@@ -136,12 +112,7 @@ export default function Experience() {
                 Technical Skills & Tools
               </h2>
               <p className="mt-2 md:mt-3 text-sm md:text-base text-gray-300">
-                My experience has allowed me to work with a variety of
-                technologies and tools, including React, Node.js, Express,
-                WebSockets, and AWS. I am proficient in full-stack development and
-                have a deep understanding of backend and frontend integration.
-                Additionally, I have worked with CI/CD pipelines, Git workflows,
-                and Agile project management tools like Jira and Trello.
+              Rock React, Node.js, Express, WebSockets, AWS, plus CI/CD with Git, Jira, and Trello. Deep full-stack fluency and backend-frontend synergy.
               </p>
             </section>
 
@@ -150,13 +121,7 @@ export default function Experience() {
                 Problem-Solving & Adaptability
               </h2>
               <p className="mt-2 md:mt-3 text-sm md:text-base text-gray-300 mb-8 md:mb-0">
-                Throughout my experiences, I have encountered and overcome
-                numerous challenges, from debugging complex systems to optimizing
-                team workflows. My ability to quickly assess a situation, break
-                down problems, and implement effective solutions has been a key
-                asset in my development journey. Working in fast-paced,
-                high-pressure environments has taught me how to remain focused,
-                adaptable, and solution-oriented.
+              Debugging, optimizing, pivoting — I thrive on fast-paced challenges, staying sharp and solution-focused under pressure.
               </p>
             </section>
           </div>

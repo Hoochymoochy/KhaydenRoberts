@@ -85,14 +85,12 @@ export default function About() {
           {/* Text Section */}
           <div className="w-full md:w-1/2 flex flex-col items-start justify-center px-6 md:px-12 py-8 md:py-0 animate-fade-in-right">
             <h1 className="text-2xl md:text-4xl font-bold mb-4">
-              {"Hello, my name is Khayden Roberts. I'm a Full-Stack Developer."}
+              {"Khayden Roberts — Full-Stack Developer & AI Enthusiast"}
             </h1>
             <p className="text-base md:text-lg mb-4 md:mb-6">
-              I specialize in crafting scalable, efficient, and engaging web and
-              mobile applications. With a deep passion for technology, I thrive in
-              building seamless user experiences, leveraging tools like React,
-              Node.js, Express, and AWS to create high-performance applications.
+              I build scalable, efficient web and mobile apps powered by modern tools like React, Node.js, Express, AWS, and AI frameworks. From seamless user experiences to intelligent automation, I turn complex challenges into elegant, high-performance solutions.
             </p>
+
             <p className="text-base md:text-lg mb-4 md:mb-6">
               {
                 "Beyond coding, I'm also exploring the intersection of music, AR, and AI, bringing creative and technical innovation together."
