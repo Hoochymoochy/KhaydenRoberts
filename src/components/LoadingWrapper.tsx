@@ -1,19 +1,12 @@
 // components/LoadingWrapper.js
 "use client";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const LoadingWrapper = ({ children }: { children: React.ReactNode }) => {
-  const router = useRouter();
-  const [isLoading, setIsLoading] = useState(false);
+  const isLoading = true;
 
   useEffect(() => {
-    const handleRouteChangeStart = () => setIsLoading(true);
-    const handleRouteChangeComplete = () => setIsLoading(false);
 
-    // For Next.js 13+ App Router, we need to handle this differently
-    // This is a simplified approach - you might need to adjust based on your routing setup
-    
     return () => {
       // Cleanup if needed
     };
