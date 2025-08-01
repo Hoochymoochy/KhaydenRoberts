@@ -3,9 +3,11 @@ import { useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Projects from "./projects.json";
+import Image from "next/image";
 
 interface Tile {
-  video: string;
+  photo?: string;
+  video?: string;
   text1: string;
   text2: string;
   badge1: string;
@@ -68,7 +70,8 @@ export default function ProjectTab() {
                 isMobile ? "w-full" : "w-1/2"
               }`}
             >
-              {renderVideo(tile.video)}
+              {tile.photo ? renderImage(tile.photo) : null}
+              {tile.video ? renderVideo(tile.video) : null}
             </div>
             <div
               className={`flex justify-center items-center ${
@@ -96,6 +99,20 @@ export default function ProjectTab() {
           <source src={videoSrc} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+      </div>
+    );
+  }
+
+  function renderImage(imageSrc: string) {
+    return (
+      <div className="w-full flex justify-center items-center">
+        <Image
+          src={imageSrc}
+          alt="Project"
+          width={800} // use a real number
+          height={500} // optional but recommended
+          className="w-full md:w-[80%] h-auto object-cover rounded-xl"
+        />
       </div>
     );
   }

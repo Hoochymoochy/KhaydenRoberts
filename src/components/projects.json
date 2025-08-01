@@ -1,5 +1,22 @@
 {
   "1": {
+    "photo": "/veritus.png",
+    "text1": "Veritus Legal AI",
+    "text2": "AI You Can Swear By",
+    "badge1": "RAG-Powered Intelligence",
+    "badge2": "Autonomous AI Agent",
+    "text3": "Veritus is a luxury-grade legal assistant delivering real, verifiable answers. Built on Retrieval-Augmented Generation with strict source-backing, it handles document parsing, law lookups, and jurisdiction-specific queries with zero hallucinations. Designed for precision, scale, and trust—Veritus brings elite AI to the legal world. \n Coming Soon!"
+    },
+  
+  "2": {
+    "video": "/braindance.mp4",
+    "text1": "Braindance: Interactive Music Engine",
+    "text2": "Real-Time Audio-Visual System Blending Movement, Music, and Culture",
+    "badge1": "Live Experience Design",
+    "badge2": "Realtime Systems",
+    "text3": "Built the core experience for Braindance—a realtime audio-visual system where DJs control the music and dancers trigger visuals through movement. Designed global hype tracking, live event sync, and crowd-driven unlocks for next-level engagement."
+  },
+  "3": {
     "video": "/mobile.mp4",
     "text1": "Core Mobile Frontend",
     "text2": "Designing and Implementing Screen Features for User Data Tracking",
@@ -7,7 +24,7 @@
     "badge2": "Mobile Development",
     "text3": "Built the frontend architecture for a mobile app tracking user data and visualizing growth, with seamless authentication and dynamic UI for real-time location and activity tracking. Focused on responsive interfaces for enhanced engagement."
   },
-  "3": {
+  "4": {
     "video": "/lore.mp4",
     "text1": "C0RE L0RE Fullstack",
     "text2": "Designing and Implementing Screen Features for Comprehensive Data Tracking",
@@ -15,8 +32,7 @@
     "badge2": "Data Tracking",
     "text3": "Developed an AI-powered personal data tracking system ensuring privacy by processing data locally, with a backend synchronizing user activity, skill evolution, and dynamic Lore experiences for real-time progression insights."
   },
-
-  "4": {
+  "5": {
     "video": "/stuped.mp4",
     "text1": "Stuped Web Frontend",
     "text2": "Building a Vector Database-Powered Image Analysis System",
