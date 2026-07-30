@@ -1,43 +1,50 @@
 {
   "1": {
-    "video": "/Veritus.mp4",
-    "text1": "Veritus Legal AI",
-    "text2": "AI You Can Swear By",
-    "badge1": "RAG-Powered Intelligence",
-    "badge2": "Autonomous AI Agent",
-    "text3": "Veritus is a luxury-grade legal assistant delivering real, verifiable answers. Built on Retrieval-Augmented Generation with strict source-backing, it handles document parsing, law lookups, and jurisdiction-specific queries with zero hallucinations. Designed for precision, scale, and trust—Veritus brings elite AI to the legal world. \n Coming Soon!"
-    },
-  
+    "video": "/veritus.mp4",
+    "text1": "Veritus",
+    "text2": "AI Legal Intelligence Platform",
+    "badge1": "RAG Architecture",
+    "badge2": "AI Systems Engineer",
+    "text3": "Designed and deployed a RAG architecture with OpenAI LLMs and Pinecone embeddings for jurisdiction-specific legal intelligence. Hybrid vector and relational retrieval, anti-hallucination citation safeguards, and adaptive response modes — cutting domain research time by 80%."
+  },
   "2": {
-    "video": "/braindance.mp4",
-    "text1": "Braindance: Interactive Music Engine",
-    "text2": "Real-Time Audio-Visual System Blending Movement, Music, and Culture",
-    "badge1": "Live Experience Design",
-    "badge2": "Realtime Systems",
-    "text3": "Built the core experience for Braindance—a realtime audio-visual system where DJs control the music and dancers trigger visuals through movement. Designed global hype tracking, live event sync, and crowd-driven unlocks for next-level engagement."
+    "text1": "FoodHub",
+    "text2": "Microservices Food Ordering Platform",
+    "badge1": "6 Services",
+    "badge2": "Horizontal Scale",
+    "link": "https://github.com/Hoochymoochy/FoodHub",
+    "text3": "Architected a microservices food ordering platform with JWT auth, MongoDB catalog, Redis basket, RabbitMQ messaging, and SQL Server order processing. Built for independent deployment and load-tested to 250+ concurrent users."
   },
   "3": {
-    "video": "/mobile.mp4",
-    "text1": "Core Mobile Frontend",
-    "text2": "Designing and Implementing Screen Features for User Data Tracking",
-    "badge1": "UI/UX Design",
-    "badge2": "Mobile Development",
-    "text3": "Built the frontend architecture for a mobile app tracking user data and visualizing growth, with seamless authentication and dynamic UI for real-time location and activity tracking. Focused on responsive interfaces for enhanced engagement."
+    "video": "/braindance.mp4",
+    "text1": "Braindance",
+    "text2": "Interactive Music Engine",
+    "badge1": "Live Experience",
+    "badge2": "Realtime Systems",
+    "text3": "Built the core experience for Braindance — a realtime audio-visual system where DJs control the music and dancers trigger visuals through movement. Global hype tracking, live event sync, and crowd-driven unlocks."
   },
   "4": {
-    "video": "/lore.mp4",
-    "text1": "C0RE L0RE Fullstack",
-    "text2": "Designing and Implementing Screen Features for Comprehensive Data Tracking",
-    "badge1": "AI Implementation",
-    "badge2": "Data Tracking",
-    "text3": "Developed an AI-powered personal data tracking system ensuring privacy by processing data locally, with a backend synchronizing user activity, skill evolution, and dynamic Lore experiences for real-time progression insights."
+    "video": "/mobile.mp4",
+    "text1": "Core Mobile",
+    "text2": "User Data Tracking Frontend",
+    "badge1": "UI/UX Design",
+    "badge2": "Mobile Development",
+    "text3": "Built the frontend architecture for a mobile app tracking user data and visualizing growth, with seamless authentication and dynamic UI for real-time location and activity tracking."
   },
   "5": {
+    "video": "/lore.mp4",
+    "text1": "C0RE L0RE",
+    "text2": "AI Personal Data Tracking",
+    "badge1": "AI Implementation",
+    "badge2": "Privacy-First",
+    "text3": "Developed an AI-powered personal data tracking system with local processing for privacy, syncing activity, skill evolution, and dynamic Lore experiences for real-time progression insights."
+  },
+  "6": {
     "video": "/stuped.mp4",
-    "text1": "Stuped Web Frontend",
-    "text2": "Building a Vector Database-Powered Image Analysis System",
+    "text1": "Stuped",
+    "text2": "Vector Image Analysis",
     "badge1": "Vector Database",
-    "badge2": "Data Tracking",
-    "text3": "Developed a web app that processes user-uploaded images via a vector database, retrieving relevant Wikipedia articles in real-time. Implemented efficient data processing and seamless React integration for user interaction."
+    "badge2": "React",
+    "text3": "Web app that processes uploaded images via a vector database and retrieves relevant Wikipedia articles in real time, with efficient data processing and seamless React integration."
   }
 }
