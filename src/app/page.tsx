@@ -304,6 +304,15 @@ export default function Home() {
                 >
                   GitHub
                 </a>
+                <span className="mx-2">|</span>
+                <a
+                  href="/Khayden_Roberts_Resume.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  Resume
+                </a>
               </p>
             </div>
             <div>
