@@ -59,6 +59,28 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="mt-10 md:mt-14 text-base md:text-lg text-white/70 leading-relaxed whitespace-pre-wrap">
             {post.content}
           </div>
+
+          <div className="mt-14 md:mt-20 pt-10 border-t border-white/10">
+            <div className="relative w-full sm:w-auto sm:inline-block">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover rounded-xl md:rounded-2xl grayscale brightness-200"
+              >
+                <source src="/border.mp4" type="video/mp4" />
+              </video>
+              <div className="relative z-10 px-4 md:px-6 py-3 bg-black/80 m-2 md:m-3 rounded-xl md:rounded-2xl hover:bg-black ease-in-out duration-500 text-center transition-colors">
+                <a
+                  href="mailto:khaydenroberts@gmail.com"
+                  className="text-lg md:text-xl text-white"
+                >
+                  khaydenroberts@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </article>
     </div>

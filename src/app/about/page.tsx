@@ -114,12 +114,12 @@ export default function About() {
               >
                 <source src="/border.mp4" type="video/mp4" />
               </video>
-              <div className="relative z-10 px-4 md:px-6 py-3 bg-black/80 m-2 md:m-3 rounded-xl md:rounded-2xl hover:bg-black ease-in-out duration-500 text-center md:text-left hover:scale-105 transition-transform">
+              <div className="relative z-10 px-4 md:px-6 py-3 bg-black/80 m-2 md:m-3 rounded-xl md:rounded-2xl hover:bg-black ease-in-out duration-500 text-center md:text-left transition-colors">
                 <a
                   href="mailto:khaydenroberts@gmail.com"
                   className="text-lg md:text-xl text-white"
                 >
-                  Get in Touch
+                  khaydenroberts@gmail.com
                 </a>
               </div>
             </div>
