@@ -50,6 +50,13 @@ export default function About() {
           </button>
           <span className="mx-2 md:mr-6 text-white/40">About</span>
           <button
+            onClick={() => navigateWithLoading("/blog")}
+            className="mx-2 md:mr-6 hover:text-white/60 transition duration-300"
+            disabled={isNavigating}
+          >
+            Blog
+          </button>
+          <button
             onClick={() => navigateWithLoading("/experience")}
             className="mx-2 hover:text-white/60 transition duration-300"
             disabled={isNavigating}

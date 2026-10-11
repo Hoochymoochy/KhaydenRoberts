@@ -109,6 +109,13 @@ export default function Home() {
                 About
               </button>
               <button
+                onClick={() => navigateWithLoading("/blog")}
+                className="hover:text-white transition-colors"
+                disabled={isNavigating}
+              >
+                Blog
+              </button>
+              <button
                 onClick={() => scrollTo("experience-section")}
                 className="hover:text-white transition-colors"
               >
